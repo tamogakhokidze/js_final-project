@@ -52,9 +52,7 @@ function createImgTag(item) {
 
 function createDots() {
   let dotParentElement = document.getElementById("div");
-    dotParentElement.classList.add("dot-parent");
-
-
+  dotParentElement.classList.add("dot-parent");
 
   dataSlider.forEach((Element) => {
     let dotItem = document.getElementById("div");
@@ -63,7 +61,6 @@ function createDots() {
     sliderIndex = dotId;
     slide();
 
-    
     console.log(dotId);
   });
   dotParentElement.appendChild(dotItem);
