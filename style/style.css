@@ -1,0 +1,283 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* ---------------home------------------ */
+
+.header {
+  position: absolute;
+  left: 2px;
+  top: 0px;
+  width: 100%;
+  height: 100px;
+  background-color: #095fba;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: row;
+  /* justify-items: center; */
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+header a {
+  color: #ffffff;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* -----------------apointment------------------- */
+
+.appointment-container {
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  width: 70%;
+  height: 1048px;
+  left: 360px;
+  top: 150px;
+  background-color: #f1f1f1;
+  justify-items: center;
+  justify-content: space-around;
+  align-items: center;
+  padding: 100px 81px;
+}
+
+.apointment-form {
+  width: 530px;
+  height: 740px;
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: space-between;
+  align-items: center;
+  /* gap: 10px; */
+  background-color: rgb(203, 213, 223);
+}
+.book-now {
+  background: #0152a8;
+  width: 100%;
+  height: 20px;
+}
+
+.inputfield {
+  height: 60px;
+  width: 100%;
+}
+
+.error-text {
+  color: red;
+}
+
+/* ------------------services------------------- */
+
+.service-container {
+  display: flex;
+  /* width: 100%; */
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+
+  /* position: absolute; */
+  /* width: 1745px;
+height: 258px;
+left: 87.52px;
+top: 204.57px; */
+}
+
+.banner-image {
+  background-image: url(../image/service\ Banner.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+
+  width: 100%;
+  height: 500px;
+}
+
+.services {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: center;
+  margin: 0 auto;
+  margin-top: 50px;
+  gap: 50px;
+}
+
+.card {
+  width: 285.27px;
+  height: 304.9px;
+  background: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* justify-content: space-between; */
+  align-items: center;
+  justify-items: center;
+  /* padding: 10px; */
+  padding-top: 20px;
+}
+
+.workinghours {
+  position: absolute;
+  width: 328px;
+  height: 220px;
+  background: rgba(255, 255, 255, 0.86);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 46px 31px;
+  gap: 10px;
+}
+
+/* .servicePicture{
+    width: 100%;
+    left: 20px;
+} */
+
+/* --------------------home---------------------------- */
+/* 
+.homepage{
+    /* background-image:url(../image/Photo\ homepage\ main.png) ; */
+/* background-repeat: no-repeat;
+    width: 100%;
+    height: 761.04px;
+} */
+*/
+
+
+/* .home-banner{
+    position: absolute;
+    width: 400.12px;
+    height: 394.31px;
+    left: 27.38px;
+    top: 182.97px;
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 14px;
+color: #143450;
+} */
+
+
+
+.dot-parent {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 50%;
+}
+
+.dot-child {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #095fba;
+  margin: 5px;
+}
+
+.dot-child.activeDot {
+  border: 5px solid white;
+}
+
+/* ---------------contact us--------------------- */
+
+.contactusbanner {
+  background-image: url(../image/Banner\ contact\ us.png);
+  background-position: center;
+  height: 258px;
+  margin-top: 100px;
+}
+
+/* .contactus-container{
+    display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 50px;
+
+position: absolute;
+width: 1200.02px;
+height: 447.5px;
+left: calc(50% - 1200.02px/2 + 0.01px);
+top: 612.75px;
+} */
+
+.contactus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: center;
+  width: 80%;
+  position: relative;
+  /* width: 1200.02px;
+height: 447.5px; */
+  /* left: calc(50% - 1200.02px/2 + 0.01px); */
+  background-color: #f1f1f1;
+  padding: 60px;
+  margin: 30px auto;
+  padding: 30px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  justify-items: center;
+  gap: 100px;
+  bottom: 40px;
+}
+
+/* ---------------------about us----------------------------- */
+.aboutuscontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  gap: 100px;
+}
+
+.aboutusbanner {
+  background-image: url(../image/Photo\ homepage\ main.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 761.04px;
+}
+.card-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* ------------------footer--------------------- */
+
+footer {
+  padding: 50px 0;
+  background-color: #fff;
+  color: #095fba;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 16px;
+}
