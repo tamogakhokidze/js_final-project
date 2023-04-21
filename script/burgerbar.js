@@ -1,7 +1,18 @@
-let navUl = document.getElementById("ul-item");
 let burgerBar = document.getElementById("burgerBar");
+let ulItem = document.getElementById("ul-item");
 
 burgerBar.addEventListener("click", function () {
-  navUl.classList.toggle("toggleulNavigation");
+  ulItem.classList.toggle("toggleUlNavigation");
   burgerBar.classList.toggle("activeBurgerbar");
 });
+
+let navBar = document.getElementById("navBar");
+
+window.onscroll = function () {
+  let top = window.scrollY;
+  if (top >= 50) {
+    navBar.classList.add("navBarActive");
+  } else {
+    navBar.classList.remove("navBarActive");
+  }
+};

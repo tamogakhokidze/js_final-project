@@ -144,3 +144,127 @@ phoneInput.addEventListener("keyup", function () {
     phoneInput.style.border = "2px solid black";
   }
 });
+
+// ------------------------cookies &  local storage-------------------
+
+// cookies notification
+
+// js cookies
+
+// let form = document.getElementById("apointment-form");
+
+// form.addEventListener("submit", function (e) {
+//   e.preventDefault();
+
+//   let nameValue = document.getElementById("name").value;
+//   cookies.set("usernamevalue", nameValue);
+//   e.target.submit();
+// });
+
+// let usernameCookies = cookies.get("usernamevalue");
+
+// if (usernameCookies) {
+//   document.getElementById("name").value = usernameCookies;
+// }
+
+// let cookie_consent = getCookie("user_cookie_consent");
+// if (cookie_consent != "") {
+//   document.getElementById("cookieNotice").style.display = "none";
+// } else {
+//   document.getElementById("cookieNotice").style.display = "block";
+// }
+
+// if (getCookie("cookieConsent") === "true") {
+//   hideCookieConsent();
+// } else {
+//   showCookieConsent();
+// }
+
+// function showCookieConsent() {
+//   document.getElementById("cookiesNote").style.display = "block";
+// }
+
+// // Hide the cookie consent form
+// function hideCookieConsent() {
+//   document.getElementById("cookiesNote").style.display = "none";
+// }
+
+// // Function to accept the cookie consent
+// function acceptCookieConsent() {
+//   setCookie("cookieConsent", "true", 365);
+//   hideCookieConsent();
+// }
+
+// // Function to get a cookie by name
+// function getCookie(name) {
+//   var nameEQ = name + "=";
+//   var ca = document.cookie.split(";");
+//   for (var i = 0; i < ca.length; i++) {
+//     var c = ca[i];
+//     while (c.charAt(0) == " ") c = c.substring(1, c.length);
+//     if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+//   }
+//   return null;
+// }
+
+// // Function to set a cookie with a name, value, and expiration date in days
+// function setCookie(name, value, days) {
+//   var expires = "";
+//   if (days) {
+//     var date = new Date();
+//     date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+//     expires = "; expires=" + date.toUTCString();
+//   }
+//   document.cookie = name + "=" + (value || "") + expires + "; path=/";
+// }
+
+(function () {
+  var infoBar = document.querySelector(".cookies-infobar");
+  var btnAccept = document.querySelector("#cookies-infobar-close");
+
+  if (wasAccepted()) {
+    hideInfobar();
+    return;
+  }
+
+  btnAccept.addEventListener("click", function (e) {
+    e.preventDefault();
+    hideInfobar();
+    saveAcceptInCookies(7);
+  });
+
+  function hideInfobar() {
+    infoBar.className = infoBar.classList.value + " cookies-infobar_accepted";
+  }
+
+  function wasAccepted() {
+    return checkCookie() === "1";
+  }
+
+  function checkCookie() {
+    var name = "cookieInfoHidden=";
+    var cookies = document.cookie.split(";");
+
+    for (var i = 0; i < cookies.length; i++) {
+      var cookie = cookies[i];
+      while (cookie.charAt(0) == " ") {
+        cookie = cookie.substring(1);
+      }
+
+      if (cookie.indexOf(name) === 0) {
+        return cookie.substring(name.length, cookie.length);
+      }
+    }
+    return "";
+  }
+
+  function saveAcceptInCookies(daysOfValidity) {
+    var now = new Date();
+    var time = now.getTime() + daysOfValidity * 24 * 60 * 60 * 1000;
+    var newTime = new Date(now.setTime(time));
+
+    newTime = newTime.toUTCString();
+
+    document.cookie = "cookieInfoHidden=1; expires=" + newTime + "; path=/";
+  }
+})();

@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style/style.css">"
+    
     <title>Document</title>
 </head>
 <body>
     <header>
-        <div class="header">
+        <div class="navbar" id="navBar" >
             <h1>
                 <img src="image/Icon pharma.png" alt="">
                 <a href="index.html" >Pharma</a>
             </h1>
         <nav class="navigation" id="navBar">
-        <ul>
+        <ul class="nav-ul" id="ul-item">
             <li>
                 <a href="home.html" class="">Home</a>
             </li>
@@ -36,19 +37,14 @@
         </ul>
         </nav>
         
-        <div class="burgerbar" id="burgerBar">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+        <div class="burger-bar" id="burgerBar">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
         
         </div>
         </div>
-        
-        
-        
-            </header>
-
-
+                    </header>
 <main>
 <div class="appointment-container" id="appointmentContainer" >
 
@@ -99,18 +95,42 @@
 </div>
 
 <div class="inputfield">
-       <button type="submit">Book Now</button>
+       <button type="submit" class="button">Book Now</button>
 </div>
 
 
 </form>
 
 </div>
+
+
+       <div class="cookies-infobar">
+        <p>
+            If you continue to use this site means you accept Terms and Conditions and Privacy Policy. We use cookies to ensure that we give you the best experience on our website.
+  <a href="#">Read terms and conditions</a>
+        </p>
+   
+  
+        <div class="cookies-infobar_wrapper">
+            <a href="#" id="cookies-infobar-close" class="cookies-infobar_btn">Accept</a>
+            <a href="about:blank" class="cookies-infobar_btn">Reject</a>
+         </div>
+    </div>
+
+
+
 </main>
 <footer>
     <p>Copyright &#169 Pharma | Designed by VictorFlow Templates </p>
-        </footer>
+ </footer>
+
+
+
+<script src="
+https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js
+"></script>
 
 <script src="script/appointment.js"></script>
+<script src="script/burgerbar.js"></script>
 </body>
 </html>

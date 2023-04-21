@@ -1,5 +1,4 @@
 let cardElement = document.querySelectorAll(".card");
-let cardTitleElement = document.querySelectorAll(".card-title");
 
 cardElement.forEach((element) => {
   element.addEventListener("click", function () {
@@ -8,16 +7,25 @@ cardElement.forEach((element) => {
   });
 });
 
+let cardTitleElement = document.querySelectorAll(".card-title");
 cardTitleElement.forEach((element) => {
   let iElement = document.createElement("i");
-  iElement.classList.toggle("fa-minus");
+  //   iElement.classList.toggle("fa-plus");
+  element.appendChild(iElement);
+  element.addEventListener("click", function () {
+    // iElement.classList.toggle("fa-plus");
+    iElement.removeClass("fa-plus").addClass("fa-minus");
+    // iElement.classList.toggle("fa-minus");
+  });
 });
+
+// cardTitleElement.forEach((element) => {
+//   let iElement = document.createElement("i");
+//   iElement.classList.toggle("fa-minus");
+// });
 
 // if (cardTitleElement.classList.contains(".fa-plus")) {
 //   cardTitleElement.classList.remove("fa-plus");
 // } else {
 //   cardTitleElement.classList.add("fa-minus");
 // }
-
-
-

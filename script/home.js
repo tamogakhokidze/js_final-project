@@ -6,17 +6,17 @@ let sliderIndex = 0;
 
 const dataSlider = [
   {
-    id: 1,
-    ImageUrl: "imageImage homepage 2.png",
+    id: 0,
+    imageUrl: "../image/slide2.png" ,
   },
 
   {
     id: 1,
-    ImageUrl: "imageImage homepage 3.png",
+    imageUrl: "./image/slide3.png",
   },
   {
-    id: 1,
-    ImageUrl: "imagePhoto homepage 4.png",
+    id: 2,
+    imageUrl: "./image/slide4.png",
   },
 ];
 
@@ -33,9 +33,8 @@ function slide() {
 
   console.log(slideItem, imgItem);
   dotElement[sliderIndex].classList.add("activeDot");
+  slide();
 }
-
-slide();
 
 function createDivTag() {
   let div = document.createElement("div");
@@ -44,31 +43,32 @@ function createDivTag() {
 
 function createImgTag(item) {
   let backgroungImageTag = document.createElement("div");
-  backgroungImageTag.style.backgroundImage = `url(${item.imageUrl})`;
+  backgroungImageTag.style.backgroundImage = `${item.imageUrl}`;
   backgroungImageTag.classList.add("backgroung-image");
 
   return backgroungImageTag;
 }
 
 function createDots() {
-  let dotParentElement = document.getElementById("div");
+  let dotParentElement = document.createElement("div");
   dotParentElement.classList.add("dot-parent");
 
-  dataSlider.forEach((Element) => {
-    let dotItem = document.getElementById("div");
+  dataSlider.forEach((element) => {
+    let dotItem = document.createElement("div");
     dotItem.classList.add("dot-child");
-    dotItem.setAttribute("data-Id", `${Element.id - 1}`);
-    sliderIndex = dotId;
-    slide();
-
+    // dotId = Element.id - 1;
+    dotItem.setAttribute("data-Id", `${element.id - 1}`);
+    dotId = sliderIndex;
+    // sliderIndex = dotId;
+    // slide();
     console.log(dotId);
+    dotParentElement.appendChild(dotItem);
   });
-  dotParentElement.appendChild(dotItem);
 }
 
 function arrowLeftClick() {
-  if (sliderIndex == 0) {
-    sliderIndex == dataSLider.length - 1;
+  if ((sliderIndex = 0)) {
+    sliderIndex = dataSlider.length - 1;
     slide();
     return;
   }
@@ -77,8 +77,8 @@ function arrowLeftClick() {
 }
 
 function arrowRightClick() {
-  if (sliderIndex == dataSLider.length - 1) {
-    sliderIndex == 0;
+  if ((sliderIndex = dataSlider.length - 1)) {
+    sliderIndex = 0;
     slide();
     return;
   }
@@ -88,3 +88,15 @@ function arrowRightClick() {
 
 arrowLeft.addEventListener("click", arrowLeftClick);
 arrowRight.addEventListener("click", arrowRightClick);
+
+// let navBar = document.getElementById('navBar');
+
+// window.onscroll = function(){
+//     let top = window.scrollY;
+//     if (top >= 50) {
+//         navBar.classList.add("navBarActive");
+//     }
+//     else{
+//         navBar.classList.remove("navBarActive");
+//     }
+// }
