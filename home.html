@@ -14,7 +14,7 @@
         <div class="navbar" id="navBar" >
     <h1>
         <img src="image/Icon pharma.png" alt="">
-        <a href="index.html" >Pharma</a>
+        <a href="home.html" >Pharma</a>
     </h1>
 <nav class="navigation" id="navBar">
 <ul class="nav-ul" id="ul-item">
@@ -64,7 +64,7 @@
   </div>
 
 
-    <div class="slider-wrapper" id="sliderWrapper"> 
+    <!-- <div class="slider-wrapper" id="sliderWrapper"> 
 <button class="arrow arrow-left" id="arrow-left"></button>
 <button class="arrow arrow-right" id="arrow-right"></button>
 
@@ -80,7 +80,53 @@
 
 
 </div>
+    </div> -->
+
+<!-- <div class="slider-container">
+    <ul class="splide__list">
+        <li class="splide__slide"><img src="image/slide2.png" alt=""></li>
+        <li class="splide__slide"><img src="image/slide3.png" alt=""></li>
+        <li class="splide__slide"><img src="image/slide4.png" alt=""></li>
+    </ul>
+
+</div> -->
+
+
+<section id="image-carousel" class="splide" aria-label="">
+    <ul class="splide__pagination"></ul>
+    <div style="position: relative">
+        <div class="splide__arrows">
+            <button class="splide__arrow splide__arrow--prev">
+                Prev
+            </button>
+            <button class="splide__arrow splide__arrow--next">
+                Next
+            </button>
+        </div>
+
+
+    <div class="splide__track">
+          <ul class="splide__list">
+              <li class="splide__slide">
+                  <img src="image/slide2.png" alt="">
+              </li>
+              <li class="splide__slide">
+                  <img src="image/slide3.png" alt="">
+              </li>
+              <li class="splide__slide">
+                  <img src="image/slide4.png" alt="">
+              </li>
+              <li class="splide__slide">
+                <img src="image/homepage.png" alt="">
+            </li>
+          </ul>
     </div>
+  </section>
+
+
+
+
+
 
 
 
@@ -90,7 +136,14 @@
             <p>Copyright &#169 Pharma | Designed by VictorFlow Templates </p>
                 </footer>
     </footer>
+    <script type="module" src="script.js"></script>
+
+
     <script src="script/home.js"></script>
     <script src="script/burgerbar.js"></script>
+    <script>
+        new Splide( '#image-carousel' ).mount();
+      </script>
+      <script src="path-to-the-file/splide.min.js"></script>
 </body>
 </html>

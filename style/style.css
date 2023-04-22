@@ -123,12 +123,12 @@
 
 /* --------------------home slider---------------------------- */
 
-.home-banner{
-    /* position: absolute;
+ /* .home-banner{
+     position: absolute;
     width: 400.12px;
     height: 394.31px;
     left: 27.38px;
-    top: 182.97px; */
+    top: 182.97px; 
     display: flex;
     position: relative;
     top: 150px;
@@ -138,29 +138,37 @@ align-items: center;
 padding: 0px;
 gap: 14px;
 color: #143450;
-}
+  } */
 
 
-
-.dot-parent {
+/* .dot-parent {
   display: flex;
   flex-direction: row;
   position: relative;
   left: 50%;
-  /* top: 350px; */
-}
+ } */
 
-.dot-child {
+/* .dot-child {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background-color: #095fba;
   margin: 5px;
-}
+} */
 
-.dot-child.activeDot {
+/* .dot-child.activeDot {
   border: 5px solid white;
-}
+} */
+
+/* 
+-----------------------splider------------------------------ */
+
+.splide__slide img {
+    width: 80%;
+    height: 50vh;
+    object-fit: cover;
+  }
+
 
 
 
@@ -398,10 +406,54 @@ height: 447.5px; */
   width: 100%;
   height: 761.04px;
 }
-.card-container {
+.cardabout-container {
+    width: 80%;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+ justify-items: center;
+ padding: 20px;
+ margin-top: 20px;
+}
+.aboutus.p{
+    /* left: 50%;
+    top: 50%; */
+    width: 80%;
+ 
+
+}
+.card-about{
+width: 300px;
+height: 300px;
+
+
+
+}
+
+
+.hide {
+    display: none;
+}
+
+
+/* -------------------filter---------------------------- */
+.filter-section{
+    width: 300px;
+   right: 150px;
+    top: 150px;
+    border: 4px solid #095fba;
+    border-radius: 30px;
+    position: fixed;
+    padding: 30px;
+    
+}
+.filter-container h3{
+ color: #095fba;
+ margin: 20px auto;
+}
+.filter-container i{
+    color: #095fba;
 }
 
 /* ------------------footer--------------------- */
