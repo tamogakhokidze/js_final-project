@@ -9,6 +9,7 @@ burgerBar.addEventListener("click", function () {
 let navBar = document.getElementById("navBar");
 
 window.onscroll = function () {
+  console.log("avtooooooooooooo");
   let top = window.scrollY;
   if (top >= 50) {
     navBar.classList.add("navBarActive");

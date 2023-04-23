@@ -1,28 +1,14 @@
 // ---------------------------filer-------------------------------
+console.log("avtoooooo345345345ooooooo");
+// import { axios } from "https://unpkg.com/axios@1.1.2/dist/axios.min.js";
+import axios from "https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm";
 
 let filterField = document.getElementById("filter");
 let filterResult = document.getElementById("filter-results");
 let clearList = [];
 
-// axios.get('https://jsonplaceholder.typicode.com/users')
-//   .then(function (response) {
-
-//     console.log(response);
-//   })
-//   .catch(function (error) {
-
-//     console.log(error);
-//   })
-//   .finally(function () {
-
-//   });
-
-
-
-
-// import axios from "axios";
-
 async function getUser() {
+  console.log("avtooooooooooooo");
   try {
     const response = await axios.get("https://reqres.in/api/users?page=2");
     console.log(response);
@@ -32,45 +18,79 @@ async function getUser() {
 }
 getUser();
 
-// getUsers = async () => {
-//   let res = await axios.get("https://reqres.in/api/users?page=1");
-//   let { data } = res.data;
-//   this.setState({ users: data });
+// // filterField.addEventListener("keyup", function (event) {
+// //   console.log("avto");
+// //   // filterData(event.target.value);
+// //   getUser();
+// // });
+
+// window.onscroll = function () {
+//   let top = window.scrollY;
+//   console.log("avto333");
 // };
 
-// getUser();
+// // axios.get('https://jsonplaceholder.typicode.com/users')
+// //   .then(function (response) {
 
-// axios.get("https://reqres.in/api/users?page=2")
-//   .then(function (response) {
-//     console.log(response);
-//   })
-//   .catch(function (error) {
-//     console.log(error);
-//   });
+// //     console.log(response);
+// //   })
+// //   .catch(function (error) {
 
-// getUser()
-//   .then((response) => {
-//     response.data.forEach((item) => {
-//       let li = document.createElement("li");
-//       li.innerText = `${item.last_name}`;
+// //     console.log(error);
+// //   })
+// //   .finally(function () {
 
-//       clearList.push(li);
-//       filterResult.appendChild(li);
-//     });
-//   })
+// //   });
 
-//   .catch((errorData) => errorData);
+// // getUsers = async () => {
+// //   let res = await axios.get("https://reqres.in/api/users?page=1");
+// //   let { data } = res.data;
+// //   this.setState({ users: data });
+// // };
 
-// function filterData(searchItem) {
-//   clearList.forEach((item) => {
-//     if (item.innerText.toLowerCase().includes(searchItem.toLowerCase())) {
-//       item.classList.remove("hide");
-//     } else {
-//       item.classList.add("hide");
-//     }
-//   });
-// }
+// // getUser();
 
-// filterField.addEventListener("keyup", function (event) {
-//   filterData(event.target.value);
+// // axios.get("https://reqres.in/api/users?page=2")
+// //   .then(function (response) {
+// //     console.log(response);
+// //   })
+// //   .catch(function (error) {
+// //     console.log(error);
+// //   });
+
+// // getUser()
+// //   .then((response) => {
+// //     response.data.forEach((item) => {
+// //       let li = document.createElement("li");
+// //       li.innerText = `${item.last_name}`;
+
+// //       clearList.push(li);
+// //       filterResult.appendChild(li);
+// //     });
+// //   })
+
+// //   .catch((errorData) => errorData);
+
+// // function filterData(searchItem) {
+// //   clearList.forEach((item) => {
+// //     if (item.innerText.toLowerCase().includes(searchItem.toLowerCase())) {
+// //       item.classList.remove("hide");
+// //     } else {
+// //       item.classList.add("hide");
+// //     }
+// //   });
+// // }
+
+// let burgerBar = document.getElementById("burgerBar");
+// let ulItem = document.getElementById("ul-item");
+
+// burgerBar.addEventListener("click", function () {
+//   ulItem.classList.toggle("toggleUlNavigation");
+//   burgerBar.classList.toggle("activeBurgerbar");
 // });
+
+// let navBar = document.getElementById("navBar");
+
+window.onscroll = function () {
+  console.log("avtooooooooooooo");
+};

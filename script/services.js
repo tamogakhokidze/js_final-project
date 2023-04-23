@@ -1,4 +1,5 @@
 let cardElement = document.querySelectorAll(".card");
+// let iElement = document.querySelector("fa-solid fa-plus");
 
 cardElement.forEach((element) => {
   element.addEventListener("click", function () {
@@ -9,13 +10,17 @@ cardElement.forEach((element) => {
 
 let cardTitleElement = document.querySelectorAll(".card-title");
 cardTitleElement.forEach((element) => {
-  let iElement = document.createElement("i");
-  //   iElement.classList.toggle("fa-plus");
-  element.appendChild(iElement);
+  // console.log(111, element);
+  // let iElement = document.createElement("i");
+  // element.appendChild(iElement);
   element.addEventListener("click", function () {
-    // iElement.classList.toggle("fa-plus");
-    iElement.removeClass("fa-plus").addClass("fa-minus");
-    // iElement.classList.toggle("fa-minus");
+    let lastChild = element.lastElementChild;
+    let firstChild = element.firstElementChild;
+    // let iElement = document.getElementsByClassName("fa-plus");
+    console.log(2323223, lastChild, firstChild);
+    // lastChild.classList.remove("fa-solid", "fa-plus");
+    // lastChild.classList.add("fa-solid", "fa-minus");
+    lastChild.classList.toggle("fa-plus", "fa-minus");
   });
 });
 

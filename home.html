@@ -22,7 +22,7 @@
         <a href="home.html" class="">Home</a>
     </li>
     <li>
-        <a href="about us.html" class="">About</a>
+        <a href="aboutus.html" class="">About</a>
     </li>
     <li>
         <a href="servises.html" class="">Servise</a>
@@ -92,7 +92,7 @@
 </div> -->
 
 
-<section id="image-carousel" class="splide" aria-label="">
+<!-- <section id="image-carousel" class="splide" aria-label="">
     <ul class="splide__pagination"></ul>
     <div style="position: relative">
         <div class="splide__arrows">
@@ -121,10 +121,21 @@
             </li>
           </ul>
     </div>
+  </section> -->
+
+
+  <section class="splide" aria-label="Splide Basic HTML Example">
+    <div class="splide__track">
+          <ul class="splide__list">
+              <li class="splide__slide"><img src="image/slide2.png" alt=""></li>
+              <li class="splide__slide"><img src="image/slide3.png" alt=""></li>
+              <li class="splide__slide"><img src="image/slide4.png" alt=""></li>
+          </ul>
+    </div>
   </section>
 
-
-
+  
+  
 
 
 
@@ -136,14 +147,21 @@
             <p>Copyright &#169 Pharma | Designed by VictorFlow Templates </p>
                 </footer>
     </footer>
-    <script type="module" src="script.js"></script>
+    <script type="module" src="script/home.js">
+        import Splide from '@splidejs/splide';
 
 
-    <script src="script/home.js"></script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+      new Splide(".splide").mount();
+    });
+       </script>
+
+   
     <script src="script/burgerbar.js"></script>
-    <script>
+    <!-- <script>
         new Splide( '#image-carousel' ).mount();
       </script>
-      <script src="path-to-the-file/splide.min.js"></script>
+      <script src="path-to-the-file/splide.min.js"></script> -->
 </body>
 </html>
