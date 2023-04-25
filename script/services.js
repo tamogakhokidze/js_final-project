@@ -17,10 +17,25 @@ cardTitleElement.forEach((element) => {
     let lastChild = element.lastElementChild;
     let firstChild = element.firstElementChild;
     // let iElement = document.getElementsByClassName("fa-plus");
-    console.log(2323223, lastChild, firstChild);
-    // lastChild.classList.remove("fa-solid", "fa-plus");
-    // lastChild.classList.add("fa-solid", "fa-minus");
-    lastChild.classList.toggle("fa-plus", "fa-minus");
+    // console.log(2323223, lastChild.classList);
+
+    if (lastChild.classList.contains("fa-plus")) {
+      // console.log("fa-plus fa-plus");
+      lastChild.classList.remove("fa-plus");
+      lastChild.classList.add("fa-minus");
+
+      var cardContent = (element.parentElement.getElementsByClassName(
+        "card-content"
+      )[0].style.display = "block");
+
+      console.log(123, cardContent);
+    } else {
+      lastChild.classList.add("fa-plus");
+      lastChild.classList.remove("fa-minus");
+      var cardContent = (element.parentElement.getElementsByClassName(
+        "card-content"
+      )[0].style.display = "none");
+    }
   });
 });
 

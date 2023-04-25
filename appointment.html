@@ -9,7 +9,7 @@
     
     <title>Document</title>
 </head>
-<body>
+<body  onload="showmodal()">
     <header>
         <div class="navbar" id="navBar" >
             <h1>
@@ -103,7 +103,7 @@
 
 </div>
 
-
+<!-- 
        <div class="cookies-infobar">
         <p>
             If you continue to use this site means you accept Terms and Conditions and Privacy Policy. We use cookies to ensure that we give you the best experience on our website.
@@ -115,8 +115,39 @@
             <a href="#" id="cookies-infobar-close" class="cookies-infobar_btn">Accept</a>
             <a href="about:blank" class="cookies-infobar_btn">Reject</a>
          </div>
-    </div>
+    </div> -->
 
+
+<div id="modalbox" class="modalbox">
+    <img src="image/cookies.png"  class="cookies">
+    <p>
+        We use cookies to optimize user experience and content
+    </p>
+<button type="button" onclick="closemodal()">
+Accept
+</button>
+<img src="image/close.png" class="closeIcon" alt="" onclick="closemodal()">
+
+</div>
+   
+
+
+<script >
+
+let modalbox = document.getElementById("modalbox");
+function showmodal(){
+    setTimeout(() => {
+        modalbox.style.display = "block"
+    }, 500)
+}
+
+function closemodal (){
+    modalbox.style.display = "none"
+}
+
+
+
+</script>
 
 
 </main>
