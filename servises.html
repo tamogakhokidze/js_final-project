@@ -10,17 +10,17 @@
     <link rel="stylesheet" href="style/style.css" />
     <title>Document</title>
   </head>
-  <body>
+  <body  onload="showmodal()">
     <header>
         <div class="navbar" id="navBar" >
             <h1>
                 <img src="image/Icon pharma.png" alt="">
-                <a href="home.html" >Pharma</a>
+                <a href="index.html" >Pharma</a>
             </h1>
         <nav class="navigation" id="navBar">
         <ul class="nav-ul" id="ul-item">
             <li>
-                <a href="home.html" class="">Home</a>
+                <a href="index.html" class="">Home</a>
             </li>
             <li>
                 <a href="aboutus.html" class="">About</a>
@@ -53,6 +53,13 @@
       <div class="banner-image">
         <!-- <img src="image/service Banner.png" alt="" /> -->
       </div>
+       <!-- 
+        <img  class="servicePicture" src="image/Photo servises.png" alt="" />
+
+         <div class="workinghours">
+          <p>
+            Working Hours Sunday To Friday 9.00 am - 10.00 pm Saturday Closed
+          </p> -->
 
       <div class="services">
         
@@ -154,19 +161,45 @@
         </div>
     </div>
              
-    <!-- 
-        <img  class="servicePicture" src="image/Photo servises.png" alt="" />
+   
+    <div id="modalbox" class="modalbox">
+      <img src="image/cookies.png"  class="cookies">
+      <p>
+          We use cookies to optimize user experience and content
+      </p>
+  <button type="button"class="accept-button" onclick="closemodal()">
+  Accept
+  </button>
 
-         <div class="workinghours">
-          <p>
-            Working Hours Sunday To Friday 9.00 am - 10.00 pm Saturday Closed
-          </p> -->
-
+  <i class="fa-solid fa-xmark" onclick="closemodal()"></i>
+  <!-- <img src="image/close.png"  -->
+  <i> </i>
+  </div>
+     
+  
+   <script >
+  
+  let modalbox = document.getElementById("modalbox");
+  function showmodal(){
+      setTimeout(() => {
+          modalbox.style.display = "block"
+      }, 500)
+  }
+  
+  function closemodal (){
+      modalbox.style.display = "none"
+  }
+  
+  
+  </script>
  </main>
 
 <footer>
     <p>Copyright &#169 Pharma | Designed by VictorFlow Templates </p>
     </footer>
+    <script src="
+https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js
+"></script>
         <script src="script/services.js"></script>
         <script src="https://kit.fontawesome.com/0ec2e12077.js",crossorigin="anonymous"></script>
         <script src="script/burgerbar.js"></script>
